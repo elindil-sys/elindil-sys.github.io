@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ariel Boutcher | Systems & Infrastructure</title>
+    <style>
+        :root {
+            --bg-color: #0d1117;
+            --text-color: #c9d1d9;
+            --text-dim: #8b949e;
+            --accent-red: #ff5555;
+            --accent-green: #50fa7b;
+            --accent-blue: #8be9fd;
+            --accent-orange: #ffb86c;
+            --accent-purple: #bd93f9;
+            --border-color: #21262d;
+            --card-bg: #161b22;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        header {
+            margin-bottom: 40px;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            font-weight: 600;
+            margin: 0 0 10px 0;
+            color: #ffffff;
+        }
+
+        h2 {
+            font-size: 1.4rem;
+            font-weight: 500;
+            margin: 40px 0 20px 0;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 8px;
+            color: #ffffff;
+        }
+
+        .subtitle {
+            font-size: 1.1rem;
+            color: var(--text-dim);
+            margin: 0 0 20px 0;
+        }
+
+        blockquote {
+            border-left: 3px solid var(--text-dim);
+            margin: 0 0 30px 0;
+            padding-left: 15px;
+            font-style: italic;
+            color: var(--text-dim);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 30px;
+            font-size: 0.95rem;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        th {
+            color: #ffffff;
+            font-weight: 600;
+            background-color: rgba(255, 255, 255, 0.02);
+        }
+
+        .tag {
+            font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace;
+            background-color: rgba(139, 148, 158, 0.15);
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-size: 0.85rem;
+            color: #ffffff;
+        }
+
+        .project-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .project-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin: 0 0 10px 0;
+        }
+
+        .project-meta {
+            margin-bottom: 15px;
+        }
+
+        .project-desc {
+            color: var(--text-dim);
+            font-size: 0.95rem;
+            margin: 0;
+        }
+
+        pre {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            padding: 15px;
+            overflow-x: auto;
+            font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace;
+            font-size: 0.9rem;
+        }
+
+        ul {
+            padding-left: 20px;
+            margin: 0 0 30px 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        a {
+            color: var(--accent-blue);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .poem {
+            font-style: italic;
+            color: var(--text-dim);
+            white-space: pre-line;
+            border-left: 2px solid var(--border-color);
+            padding-left: 20px;
+            margin: 30px 0;
+        }
+
+        .color-bare-metal { color: var(--accent-red); }
+        .color-scaling { color: var(--accent-green); }
+        .color-research { color: var(--accent-blue); }
+        .color-claims { color: var(--accent-orange); }
+        .color-lab { color: var(--accent-purple); }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Ariel Boutcher</h1>
+            <div class="subtitle">Systems Development Specialist &amp; Low-Level Infrastructure Architect</div>
+            <blockquote>"The computer is a physical machine with explicit hardware boundaries. Optimizing software means respecting the hardware."</blockquote>
+        </header>
+
+        <main>
+            <h2>Operational Matrix</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Layer</th>
+                        <th>Objective</th>
+                        <th>Toolchain / Ecosystem</th>
+                        <th>Focus Vector</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong class="color-bare-metal">Bare-Metal</strong></td>
+                        <td>Memory Safety &amp; OS Internals</td>
+                        <td><span class="tag">Pure C</span> <span class="tag">Rust</span> <span class="tag">Linux Kernels</span></td>
+                        <td>Compile-time safety guarantees &amp; explicit resource lifetimes</td>
+                    </tr>
+                    <tr>
+                        <td><strong class="color-scaling">Distributed Scaling</strong></td>
+                        <td>Concurrent Backends &amp; FinTech</td>
+                        <td><span class="tag">Go (Golang)</span> <span class="tag">PostgreSQL</span> <span class="tag">Redis</span></td>
+                        <td>Thread delivery &amp; relational transaction integrity</td>
+                    </tr>
+                    <tr>
+                        <td><strong class="color-research">Advanced Research</strong></td>
+                        <td>High-Performance Computing</td>
+                        <td><span class="tag">C++</span> <span class="tag">Discrete Mathematics</span></td>
+                        <td>Data compression &amp; quantitative architectures</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <ul>
+                <li><strong>Research Focus:</strong> High-Performance Computing, Data Compression, and Quantitative Trading Models.</li>
+                <li><strong>Operating Environment:</strong> Running on Arch Linux distributions, optimizing development setups with raw terminal pipelines.</li>
+                <li><strong>Fascinations:</strong> Astrophysics, space exploration, and studying the structural properties of stellar phenomena.</li>
+            </ul>
+
+            <h2>Tech Stack &amp; Tooling</h2>
+            <pre><code class="language-c"><span style="color: #ff79c6;">#include</span> <span style="color: #f1fa8c;">&lt;stdio.h&gt;</span>
+
+<span style="color: #ff79c6;">void</span> <span style="color: #50fa7b;">display_stack</span>() {
+    <span style="color: #ff79c6;">char</span>* low_level   = <span style="color: #f1fa8c;">"C, C++, Rust, Assembly"</span>;
+    <span style="color: #ff79c6;">char</span>* concurrent  = <span style="color: #f1fa8c;">"Go (Golang), Java/Spring Boot"</span>;
+    <span style="color: #ff79c6;">char</span>* frontend    = <span style="color: #f1fa8c;">"JavaScript (ES6+), TypeScript, Next.js"</span>;
+    <span style="color: #ff79c6;">char</span>* databases   = <span style="color: #f1fa8c;">"PostgreSQL, Redis"</span>;
+    <span style="color: #ff79c6;">char</span>* tooling     = <span style="color: #f1fa8c;">"Git, Valgrind, Make/CMake, Linux CLI"</span>;
+    
+    <span style="color: #50fa7b;">printf</span>(<span style="color: #f1fa8c;">"Primitives: %s\nScale: %s\nInterfaces: %s\n"</span>, low_level, concurrent, frontend);
+}</code></pre>
+
+            <h2>Core Systems Infrastructure &amp; Design</h2>
+
+            <div class="project-card">
+                <div class="project-title class-title color-claims">Medical Claims Adjudication Engine</div>
+                <div class="project-meta">
+                    <span class="tag">Go</span> <span class="tag">Relational Data</span>
+                </div>
+                <p class="project-desc">A high-velocity validation and processing framework engineered for the specific data rules of the Kenyan healthcare market. Handles parallel execution threads with strict memory safety boundaries to prevent precision decay under heavy concurrent loads.</p>
+            </div>
+
+            <div class="project-card">
+                <div class="project-title color-lab">Systems Lab &amp; Algorithm Blueprints</div>
+                <div class="project-meta">
+                    <span class="tag">Pure C</span> <span class="tag">Bash</span> <span class="tag">Make</span>
+                </div>
+                <p class="project-desc">Low-level implementations of core data structures, graph theory networks, and manual memory alignment utilities compiled under rigid flag safety metrics. Features isolated sandbox testing environments.</p>
+            </div>
+
+            <div class="project-card">
+                <div class="project-title style-title" style="color: var(--accent-purple);">Archellect System Client</div>
+                <div class="project-meta">
+                    <span class="tag">JavaScript</span> <span class="tag">TypeScript</span>
+                </div>
+                <p class="project-desc">A complete client-side redesign and engine optimization layer using JavaScript/TypeScript. Re-engineered from the ground up to reduce operational overhead, streamline asset delivery pipelines, and ensure high runtime performance.</p>
+            </div>
+
+            <h2>The Abstract Layer</h2>
+            <div class="poem">The clock rate bounds the silent room,
+            Where stacks collapse and heap spaces bloom.
+            A pointer tracks the stellar trace,
+            Of structural light in cold, dark space.
+            We bind the bit, align the core,
+            To hold the weight of infinite lore.</div>
+
+            <h2>Signal Routing</h2>
+            <ul>
+                <li><strong>GitHub:</strong> <a href="https://github.com/elindil-sys" target="_blank">@elindil-sys</a></li>
+                <li><strong>Corporate Entity:</strong> Professional software development, technical SEO, and digital branding through Elindil Services.</li>
+            </ul>
+        </main>
+    </div>
+
+</body>
+</html>
