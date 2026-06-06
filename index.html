@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ariel Boutcher | Systems & Infrastructure</title>
+    <title>Ariel Boutcher | Systems Engineering &amp; Architecture</title>
     <style>
         :root {
             --bg-color: #0d1117;
@@ -106,7 +106,16 @@
         .project-title {
             font-size: 1.2rem;
             font-weight: 600;
-            margin: 0 0 10px 0;
+            margin: 0 0 5px 0;
+        }
+
+        .project-status {
+            font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace;
+            font-size: 0.8rem;
+            color: var(--accent-green);
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
 
         .project-meta {
@@ -156,11 +165,11 @@
             margin: 30px 0;
         }
 
-        .color-bare-metal { color: var(--accent-red); }
-        .color-scaling { color: var(--accent-green); }
+        .color-core { color: var(--accent-red); }
+        .color-infra { color: var(--accent-green); }
         .color-research { color: var(--accent-blue); }
-        .color-claims { color: var(--accent-orange); }
-        .color-lab { color: var(--accent-purple); }
+        .color-orange { color: var(--accent-orange); }
+        .color-purple { color: var(--accent-purple); }
     </style>
 </head>
 <body>
@@ -173,81 +182,81 @@
         </header>
 
         <main>
-            <h2>Operational Matrix</h2>
+            <h2>Technical Skillset &amp; Tooling</h2>
             <table>
                 <thead>
                     <tr>
-                        <th>Layer</th>
-                        <th>Objective</th>
-                        <th>Toolchain / Ecosystem</th>
-                        <th>Focus Vector</th>
+                        <th style="width: 25%">Domain</th>
+                        <th style="width: 35%">Languages / Toolchains</th>
+                        <th style="width: 40%">Core Capabilities</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td><strong class="color-bare-metal">Bare-Metal</strong></td>
-                        <td>Memory Safety &amp; OS Internals</td>
-                        <td><span class="tag">Pure C</span> <span class="tag">Rust</span> <span class="tag">Linux Kernels</span></td>
-                        <td>Compile-time safety guarantees &amp; explicit resource lifetimes</td>
+                        <td><strong class="color-core">Low-Level Systems</strong></td>
+                        <td><span class="tag">C</span> <span class="tag">C++</span> <span class="tag">Rust</span> <span class="tag">Assembly</span></td>
+                        <td>Manual memory alignment, pointer manipulation, POSIX system calls</td>
                     </tr>
                     <tr>
-                        <td><strong class="color-scaling">Distributed Scaling</strong></td>
-                        <td>Concurrent Backends &amp; FinTech</td>
-                        <td><span class="tag">Go (Golang)</span> <span class="tag">PostgreSQL</span> <span class="tag">Redis</span></td>
-                        <td>Thread delivery &amp; relational transaction integrity</td>
+                        <td><strong class="color-infra">Infrastructure &amp; Scaling</strong></td>
+                        <td><span class="tag">Go (Golang)</span> <span class="tag">Python</span> <span class="tag">Java</span></td>
+                        <td>Highly concurrent pipelines, multithreaded design, IPC synchronization</td>
                     </tr>
                     <tr>
-                        <td><strong class="color-research">Advanced Research</strong></td>
-                        <td>High-Performance Computing</td>
-                        <td><span class="tag">C++</span> <span class="tag">Discrete Mathematics</span></td>
-                        <td>Data compression &amp; quantitative architectures</td>
+                        <td><strong class="color-research">Data &amp; Environment</strong></td>
+                        <td><span class="tag">PostgreSQL</span> <span class="tag">Redis</span> <span class="tag">Bash</span></td>
+                        <td>Relational integrity layers, memory caches, Unix terminal profiling</td>
+                    </tr>
+                    <tr>
+                        <td><strong class="color-purple">Verification &amp; Build</strong></td>
+                        <td><span class="tag">Valgrind</span> <span class="tag">Git</span> <span class="tag">Make / CMake</span></td>
+                        <td>Memory leak isolation, static analysis, performance benchmarking</td>
                     </tr>
                 </tbody>
             </table>
 
             <ul>
                 <li><strong>Research Focus:</strong> High-Performance Computing, Data Compression, and Quantitative Trading Models.</li>
-                <li><strong>Operating Environment:</strong> Running on Arch Linux distributions, optimizing development setups with raw terminal pipelines.</li>
+                <li><strong>Operating Environment:</strong> Running on Arch Linux distributions, optimizing development setups via direct terminal pipelines.</li>
                 <li><strong>Fascinations:</strong> Astrophysics, space exploration, and studying the structural properties of stellar phenomena.</li>
             </ul>
 
-            <h2>Tech Stack &amp; Tooling</h2>
-            <pre><code class="language-c"><span style="color: #ff79c6;">#include</span> <span style="color: #f1fa8c;">&lt;stdio.h&gt;</span>
-
-<span style="color: #ff79c6;">void</span> <span style="color: #50fa7b;">display_stack</span>() {
-    <span style="color: #ff79c6;">char</span>* low_level   = <span style="color: #f1fa8c;">"C, C++, Rust, Assembly"</span>;
-    <span style="color: #ff79c6;">char</span>* concurrent  = <span style="color: #f1fa8c;">"Go (Golang), Java/Spring Boot"</span>;
-    <span style="color: #ff79c6;">char</span>* frontend    = <span style="color: #f1fa8c;">"JavaScript (ES6+), TypeScript, Next.js"</span>;
-    <span style="color: #ff79c6;">char</span>* databases   = <span style="color: #f1fa8c;">"PostgreSQL, Redis"</span>;
-    <span style="color: #ff79c6;">char</span>* tooling     = <span style="color: #f1fa8c;">"Git, Valgrind, Make/CMake, Linux CLI"</span>;
-    
-    <span style="color: #50fa7b;">printf</span>(<span style="color: #f1fa8c;">"Primitives: %s\nScale: %s\nInterfaces: %s\n"</span>, low_level, concurrent, frontend);
-}</code></pre>
-
-            <h2>Core Systems Infrastructure &amp; Design</h2>
+            <h2>Active Systems Infrastructure &amp; Research Engines</h2>
 
             <div class="project-card">
-                <div class="project-title class-title color-claims">Medical Claims Adjudication Engine</div>
+                <div class="project-title color-orange">Medical Claims Adjudication Engine</div>
+                <div class="project-status">// Active Pipeline: Phase 1 Prototype Execution</div>
                 <div class="project-meta">
-                    <span class="tag">Go</span> <span class="tag">Relational Data</span>
+                    <span class="tag">Go</span> <span class="tag">PostgreSQL</span> <span class="tag">Concurrency Primitives</span>
                 </div>
-                <p class="project-desc">A high-velocity validation and processing framework engineered for the specific data rules of the Kenyan healthcare market. Handles parallel execution threads with strict memory safety boundaries to prevent precision decay under heavy concurrent loads.</p>
+                <p class="project-desc">Designing and executing a high-velocity validation and processing framework engineered specifically for the transaction data patterns of the Kenyan healthcare market. Developing parallel execution channels with strict atomic guardrails to adjudicate multi-institutional claims without synchronization data races or precision decay.</p>
             </div>
 
             <div class="project-card">
-                <div class="project-title color-lab">Systems Lab &amp; Algorithm Blueprints</div>
+                <div class="project-title color-purple">High-Performance Dynamic Memory Allocator</div>
+                <div class="project-status">// Active Research: Custom Heap Allocation Modeling</div>
                 <div class="project-meta">
-                    <span class="tag">Pure C</span> <span class="tag">Bash</span> <span class="tag">Make</span>
+                    <span class="tag">C</span> <span class="tag">POSIX Systems</span> <span class="tag">Valgrind</span>
                 </div>
-                <p class="project-desc">Low-level implementations of core data structures, graph theory networks, and manual memory alignment utilities compiled under rigid flag safety metrics. Features isolated sandbox testing environments.</p>
+                <p class="project-desc">Implementing a custom bare-metal user-space memory allocator from scratch to bypass standard glibc malloc overhead. Engineering optimized segregated free lists, explicit memory block alignment routines, and immediate boundary-tag coalescing algorithms to systematically mitigate internal and external heap fragmentation.</p>
             </div>
 
             <div class="project-card">
-                <div class="project-title style-title" style="color: var(--accent-purple);">Archellect System Client</div>
+                <div class="project-title color-research">Lempel-Ziv Style Low-Overhead Data Compression Utility</div>
+                <div class="project-status">// Active Research: Algorithmic Efficiency Track</div>
                 <div class="project-meta">
-                    <span class="tag">JavaScript</span> <span class="tag">TypeScript</span>
+                    <span class="tag">C++</span> <span class="tag">Discrete Mathematics</span> <span class="tag">CMake</span>
                 </div>
-                <p class="project-desc">A complete client-side redesign and engine optimization layer using JavaScript/TypeScript. Re-engineered from the ground up to reduce operational overhead, streamline asset delivery pipelines, and ensure high runtime performance.</p>
+                <p class="project-desc">Building a specialized binary compression engine tailored for high-frequency time-series data storage. Relying heavily on discrete combinatorial logic and bitwise register encoding schemes to maximize structural compression ratios while minimizing CPU cache misses and translation lookaside buffer (TLB) thrashing during rapid decompression loops.</p>
+            </div>
+
+            <div class="project-card">
+                <div class="project-title color-core">Asynchronous Linux Network Event Multiplexer</div>
+                <div class="project-status">// Active Pipeline: System-Level Kernel Interface</div>
+                <div class="project-meta">
+                    <span class="tag">Rust</span> <span class="tag">Linux Primitives</span> <span class="tag">POSIX Sockets</span>
+                </div>
+                <p class="project-desc">Constructing a high-throughput network engine built over the native Linux epoll API. Utilizing Rust's explicit ownership semantics and zero-cost abstractions to orchestrate non-blocking, asynchronous I/O multiplexing across thousands of concurrent TCP file descriptors without allocating unnecessary kernel-space memory tracking overhead.</p>
             </div>
 
             <h2>The Abstract Layer</h2>
